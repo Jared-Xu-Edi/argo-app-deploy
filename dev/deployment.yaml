@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: baas-frontend
-        image: jaredxu/baas-frontend:v2
+        image: jaredxu/baas-frontend:v1
         ports:
         - containerPort: 8080
