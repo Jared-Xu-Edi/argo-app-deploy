@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Jared-Xu-Edi/argo-app-deploy.git
     targetRevision: HEAD
-    path: dev
+    path: appDeployDemo/demo1/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: baas
