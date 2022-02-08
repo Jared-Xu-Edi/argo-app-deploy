@@ -10,11 +10,11 @@ spec:
      - cluster: kind-kind-jared
        url: https://kubernetes.default.svc
        values:
-         project:
+         project: baas-app
      - cluster: kind-dev-cluster
        url: https://192.168.1.139:8443
        values:
-         project: default
+         project: baas-app
  template:
    metadata:
      name: '{{cluster}}-baas'
