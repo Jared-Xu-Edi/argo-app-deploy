@@ -10,16 +10,16 @@ spec:
      - cluster: kind-kind-jared
        url: https://kubernetes.default.svc
        values:
-         path: appDeployDemo/demo1/dev
+         project: default
      - cluster: kind-dev-cluster
        url: https://192.168.1.139:8443
        values:
-         path: appDeployDemo/demo1/prod
+         project: default
  template:
    metadata:
      name: '{{cluster}}-baas'
    spec:
-     project: baas-app
+     project: default
      source:
        repoURL: https://github.com/Jared-Xu-Edi/argo-app-deploy.git
        targetRevision: HEAD
