@@ -23,7 +23,7 @@ spec:
      source:
        repoURL: https://github.com/Jared-Xu-Edi/argo-app-deploy.git
        targetRevision: HEAD
-       path: '{{values.path}}'
+       path: appDeployDemo/demo1/dev
      destination:
        server: '{{url}}'
        namespace: baas
