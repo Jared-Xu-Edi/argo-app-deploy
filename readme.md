@@ -142,7 +142,7 @@ kubectl delete -f .\applicationSetDemo1.yaml
 
 However, there are many boilerplate code in the manifest.
 
-## Step10: Improve with Kustomize(Demo2)
+## Step11: Improve with Kustomize(Demo2)
 
 Look at what kustomize builds your base resource:
 
