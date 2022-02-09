@@ -64,3 +64,9 @@ Run the following and try to change the replica number to be 3 in the deployment
 kubectl edit deployment baas-frontend -n baas
 ```
 You should see nothing changes as everything is synced from the code in github repo.
+
+## Step8: Delete deployment in k8s
+Run the following to delete the deployment:
+```
+kubectl delete -f .\application.yaml
+```

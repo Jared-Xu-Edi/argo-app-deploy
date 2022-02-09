@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: baas-frontend
+  namespace: baas
+spec:
+  #revisionHistoryLimit: 0 #this can help to get rid of old replicaSet.
+  selector:
+    matchLabels:
+      app: baas-frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: baas-frontend
+    spec:
+      containers:
+      - name: baas-frontend
+        image: jaredxu/baas-frontend:v1
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: baas-frontend
+  namespace: baas
+spec:
+  template:
+    spec:
+      containers:
+      - name: baas-frontend
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
