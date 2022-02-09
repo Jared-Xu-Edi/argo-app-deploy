@@ -14,9 +14,6 @@ kind create cluster --name dev-cluster --config .\multicluster\dev-cluster.yml
 C:\Users\xuj1>argocd cluster add
 time="2022-02-08T14:53:07Z" level=error msg="Choose a context name from:"
 CURRENT  NAME                       CLUSTER                    SERVER
-         AAD-WXSDIAKS               AAD-WXSDIAKS               https://aad-wxsdiaks-dns-d761d03e.hcp.northeurope.azmk8s.io:443
-         i17-int-ctop-eus-aks       i17-int-ctop-eus-aks       https://i17-int-ctop-eus-f0f0f558.hcp.eastus.azmk8s.io:443
-         i17-int-dev-jared-aks      i17-int-dev-jared-aks      https://i17-int-dev-jared-03ab77c8.hcp.northeurope.azmk8s.io:443
 *        kind-dev-cluster           kind-dev-cluster           https://192.168.1.139:8443
          kind-kind-jared            kind-kind-jared            https://127.0.0.1:53034
 ```
