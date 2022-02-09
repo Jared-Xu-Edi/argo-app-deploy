@@ -4,4 +4,4 @@ metadata:
   name: baas-frontend
   namespace: baas
 spec:
-  replicas: 4
+  replicas: 2
