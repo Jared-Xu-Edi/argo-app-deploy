@@ -59,7 +59,7 @@ Go to repo https://github.com/Jared-Xu-Edi/argo-app-deploy.git and change the ap
 Now you should see argoCD is synchrozing this change and roll out the old pods automatically.
 
 ## Step7: Try change deployment in k8s
-Run the following and try to change the replica number to be 3 in the deployment.
+Run the following and try to change the replica number to be 3 in the deployment or change from webui.
 ```
 kubectl edit deployment baas-frontend -n baas
 ```
