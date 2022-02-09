@@ -25,7 +25,7 @@ docker run -p 7070:8080 jaredxu/baas-frontend:v1
 ```
 you should see dark theme web app, or
 ```
-docker run -p 7070:8080 jaredxu/baas-frontend:v2
+docker run -p 7071:8080 jaredxu/baas-frontend:v2
 ```
 you should see light theme.
 
