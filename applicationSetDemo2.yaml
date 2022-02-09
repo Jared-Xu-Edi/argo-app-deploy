@@ -17,7 +17,7 @@ spec:
          project: default
  template:
    metadata:
-     name: '{{cluster}}-baas'
+     name: 'cluster-{{cluster}}-baas-app'
    spec:
      project: default
      source:

@@ -70,3 +70,40 @@ Run the following to delete the deployment:
 ```
 kubectl delete -f .\application.yaml
 ```
+
+## Step9: ArgoCD manage deployment to 2 clusters:
+Assume that we've already got 2 clusters running:
+```
+kubectl config get-contexts
+```
+and let's make sure we are using our management cluster where argoCD is installed:
+```
+kubectl config use-context kind-kind-jared
+```
+make sure nothing is in namespace `baas` and run:
+```
+kubectl apply -f .\applicationSetDemo1.yaml
+```
+and you should see 2 deployment tab displayed on argoCD main page.
+delete with command:
+```
+kubectl delete -f .\applicationSetDemo1.yaml
+```
+## Step10: Improve with Kustomize
+
+Look at what kustomize build your base resource:
+```
+kustomize build .\appDeployDemo\demo2\base\
+```
+Then look at how the diff pacth is built based on the base:
+```
+kustomize build .\appDeployDemo\demo2\overlays\dev
+```
+and
+```
+kustomize build .\appDeployDemo\demo2\overlays\prod
+```
+Now create the deployment on 2 cluster by running:
+```
+kubectl apply -f .\applicationSetDemo2.yaml
+```

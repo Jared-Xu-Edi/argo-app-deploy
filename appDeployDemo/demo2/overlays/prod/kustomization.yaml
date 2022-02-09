@@ -4,3 +4,8 @@ patches:
   - replica_count.yaml
 patchesStrategicMerge:
   - env.yaml
+configMapGenerator:
+- name: baas-config
+  namespace: baas
+  files:
+    - configs/config.json
