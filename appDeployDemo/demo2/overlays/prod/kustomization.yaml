@@ -4,6 +4,9 @@ patches:
   - replica_count.yaml
 patchesStrategicMerge:
   - env.yaml
+images:
+- name: jaredxu/baas-frontend
+  newTag: v2
 configMapGenerator:
 - name: baas-config
   namespace: baas
