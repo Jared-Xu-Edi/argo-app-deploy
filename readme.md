@@ -1,7 +1,16 @@
 # A Demo of ArgoCD Deployment
 
 ## Prerequisite
-Make sure you have your k8s cluster ready and kubectl installed locally.
+Make sure you have at least 2 k8s cluster2 ready and kubectl installed locally.
+You can check in multicluster folder to see how to create them.
+Confirm with command:
+```
+kubectl config get-contexts
+```
+and switch to the cluster where you want to install argoCD and we call this manager cluster:
+```
+kubectl config use-context your_cluster_name
+```
 
 ## App Being Deployed in This Demo
 This is a microservice app I wrote a while back but in this demo, I only deploy the frontend to simply things.
