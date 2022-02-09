@@ -2,6 +2,7 @@ bases:
   - ../../base
 patches:
   - replica_count.yaml
+  - resource_limits.yaml
 patchesStrategicMerge:
   - env.yaml
 images:
