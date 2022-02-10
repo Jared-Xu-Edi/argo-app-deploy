@@ -150,7 +150,10 @@ kubectl delete -f .\application.yaml
 
 ## Step10: Deploy app to 2 clusters using the demo1 folder structure(Demo2) with ArgoCD applicationSet.
 
-The ApplicationSet controller is installed alongside Argo CD (within the same namespace), and it automatically generates Argo CD Applications based on the contents of a new ApplicationSet Custom Resource (CR)
+The ApplicationSet controller is not installed by default, a new ApplicationSet Custom Resource (CR) should be installed:
+```
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/applicationset/master/manifests/install.yaml
+```
 
 Make sure resource in namespace `baas` is already purged and run:
 
