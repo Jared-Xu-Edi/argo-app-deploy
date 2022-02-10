@@ -1,10 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 bases:
   - ../../base
 patches:
   - replica_count.yaml
-  - resource_limits.yaml
-patchesStrategicMerge:
-  - env.yaml
+  - resource_limit.yaml
+# patchesStrategicMerge:
+#   - env.yaml
 images:
 - name: jaredxu/baas-frontend
   newTag: v2
