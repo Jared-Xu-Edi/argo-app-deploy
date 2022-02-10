@@ -132,9 +132,12 @@ You should see nothing changes as everything is synced from the code in github r
 Change the app version from v2 to v3 in appDeployDemo/demo1/dev/deployment and commit the change.
 v3 does not really exist in docker hub so this will cause the error.
 
-Now, disable the auto-sync on ArgoCD WebUI and rollback to previous version.
+Rollback:
+* First, you should disable the auto-sync on ArgoCD WebUI and rollback to previous version.
 
-Change the version back to v1 and commit the change. Re-enable auto-sync, it should be good in ArgoCD and synced to the latest good commit/version.
+* Seoncd, change the version back to v1 and commit the change.
+
+Rememeber to re-enable auto-sync, it should be good now in ArgoCD and synced to the latest good commit/version.
 
 
 ## Step9: Delete deployment in k8s

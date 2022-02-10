@@ -4,7 +4,7 @@ metadata:
   name: baas-frontend
   namespace: baas
 spec:
-  #revisionHistoryLimit: 0 #this can help to get rid of old replicaSet.
+  revisionHistoryLimit: 0 #this can help to get rid of old replicaSet.
   selector:
     matchLabels:
       app: baas-frontend
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: baas-frontend
-        image: jaredxu/baas-frontend:v1
+        image: jaredxu/baas-frontend:v3
         ports:
         - containerPort: 8080
