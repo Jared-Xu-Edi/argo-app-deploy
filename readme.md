@@ -19,7 +19,7 @@ kubectl config use-context your_cluster_name
 Should look like:
 ```
 +-----------------+     +---------------+
-| manager cluster +     +   cluster 2   +
+| manager cluster |     |   cluster 2   |
 |                 |     |               |
 +-----------------+     +---------------+
 ```
