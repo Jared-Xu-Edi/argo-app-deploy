@@ -93,12 +93,13 @@ kubectl apply -f .\application.yaml
 ```
 Now the setup should look like:
 
+```
 +-----------------+     +---------------+
 | manager cluster |     |   cluster 2   |
 |   argoCD        |     |               |
 |   baas-app      |     |               |
 +-----------------+     +---------------+
-
+```
 ## Step5: Access The App
 
 As I didn't make nodePort service work in Kind, so in this case, we need to expose the pod with:
@@ -158,11 +159,13 @@ and you should see 2 deployment card displayed on argoCD main page.
 
 Now the setup should look like:
 
+```
 +----------------------+     +--------------------+
 | manager cluster(dev) |     |   cluster(prod) 2  |
 |   argoCD             |     |                    |
 |   baas-appv1         |     |   baas-appv2       |
 +----------------------+     +--------------------+
+```
 
 Take a look at the applicationSetDemo1.yaml and pay attention to the template.
 
