@@ -4,7 +4,7 @@ metadata:
   name: baas-frontend
   namespace: baas
 spec:
-  #revisionHistoryLimit: 0 #this can help to get rid of old replicaSet.
+  revisionHistoryLimit: 0 #this can help to get rid of old replicaSet.
   selector:
     matchLabels:
       app: baas-frontend
