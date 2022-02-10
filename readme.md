@@ -75,6 +75,11 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 and you can access the webui now from https://localhost:8080
 
+You can get the initial password with:
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+Remember to update to your own password after login.
 
 ## Step2: App Deploy Folder/Branch Structure
 
@@ -102,7 +107,7 @@ Now the setup should look like:
 ```
 ## Step5: Access The App
 
-As I didn't make nodePort service work in Kind, so in this case, we need to expose the pod with:
+As I didn't make nodePort service work in Kind, so in this case, I need to expose the pod with:
 (You need to find out the pod name with `kubectl get pods -n baas`)
 
 ```
@@ -129,12 +134,12 @@ You should see nothing changes as everything is synced from the code in github r
 
 ## Step8: Introduce Defects and Rollback
 
+### Defects:
 Change the app version from v2 to v3 in appDeployDemo/demo1/dev/deployment and commit the change.
 v3 does not really exist in docker hub so this will cause the error.
 
-Rollback:
+### Rollback:
 * First, you should disable the auto-sync on ArgoCD WebUI and rollback to previous version.
-
 * Seoncd, change the version back to v1 and commit the change.
 
 Rememeber to re-enable auto-sync, it should be good now in ArgoCD and synced to the latest good commit/version.
@@ -174,20 +179,15 @@ Now the setup should look like:
 ```
 
 Take a look at the applicationSetDemo1.yaml and pay attention to the template.
-
 ArgoCD is managing deployment over multiple clusters this way.
-
 However, in this demo, there are many boilerplate code in the manifest.
-
 Let's delete the resource with command for now:
 ```
 kubectl delete -f .\applicationSetDemo1.yaml
 ```
 
 ## Step11: Improve with Kustomize(Demo2)
-
 Now look at how kustomize builds your base resource:
-
 ```
 kustomize build .\appDeployDemo\demo2\base\
 ```
