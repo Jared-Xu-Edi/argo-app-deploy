@@ -58,12 +58,12 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ```
 
 Your setup should now look like:
-
+```
 +-----------------+     +---------------+
 | manager cluster |     |   cluster 2   |
 |   argoCD        |     |               |
 +-----------------+     +---------------+
-
+```
 However, if you are curious about the content of install.yaml, you can find it in argoCD/install.yaml
 
 - Expose the Service
