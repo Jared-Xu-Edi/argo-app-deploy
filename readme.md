@@ -17,12 +17,12 @@ kubectl config use-context your_cluster_name
 ```
 
 Should look like:
-
+```
 +-----------------+     +---------------+
 | manager cluster +     +   cluster 2   +
 |                 |     |               |
 +-----------------+     +---------------+
-
+```
 ## App Being Deployed in This Demo
 
 This is a microservice app I wrote a while back but in this demo, I only deploy the frontend to simply things.
