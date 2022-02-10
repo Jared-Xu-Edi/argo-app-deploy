@@ -129,7 +129,7 @@ You should see nothing changes as everything is synced from the code in github r
 
 ## Step8: Introduce Defects and Rollback
 
-Change the app version from v1 to v3 in appDeployDemo/demo1/dev/deployment and commit the change.
+Change the app version from v2 to v3 in appDeployDemo/demo1/dev/deployment and commit the change.
 v3 does not really exist in docker hub so this will cause the error.
 
 Now, disable the auto-sync on ArgoCD WebUI and rollback to previous version.
