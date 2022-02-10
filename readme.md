@@ -97,7 +97,7 @@ Now the setup should look like:
 +-----------------+     +---------------+
 | manager cluster |     |   cluster 2   |
 |   argoCD        |     |               |
-|   baas-app      |     |               |
+|   baas-frontend |     |               |
 +-----------------+     +---------------+
 ```
 ## Step5: Access The App
@@ -163,7 +163,7 @@ Now the setup should look like:
 +----------------------+     +--------------------+
 | manager cluster(dev) |     |   cluster(prod) 2  |
 |   argoCD             |     |                    |
-|   baas-appv1         |     |   baas-appv2       |
+|   baas-frontend:v1   |     |   baas-frontend:v2 |
 +----------------------+     +--------------------+
 ```
 
